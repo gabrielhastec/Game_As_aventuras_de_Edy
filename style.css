@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(49, 80, 49);
+
+    display: grid;
+    place-items: center;
+}
+h1{
+    color: yellow;
+    font-style: italic;
+    font-family: 'Trebuchet MS';
+    /*
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;*/
+
+    display: grid;
+    place-items: center;
+}
+h2{
+    color: yellow;
+    font-style: italic;
+
+    display: grid;
+    place-items: center;
+
+}
+h3{
+    display: grid;
+    place-items: center;
+}
+
+form{
+    color: yellow;
+}
+
