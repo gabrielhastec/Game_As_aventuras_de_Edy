@@ -2,11 +2,14 @@
 
 function calcular() {
     const name = document.getElementById("player").value.trim();
+    const mensagemDiv = document.getElementById("mensagem");
+    mensagemDiv.classList.add("d-none");
+
     if (name === "") {
-        alert("Por favor, insira o seu nome.");
+        mostrarMensagem("Por favor, insira o seu nome.", "danger");
         return;
     }
-
+    
     let level = 0;
 
     // Verifica escolha de personagem
@@ -18,7 +21,7 @@ function calcular() {
     } else if (isWarriorCharacter) {
         level += 1800;
     } else {
-        alert("Você precisa escolher um personagem.");
+        mostrarMensagem("Você precisa escolher um personagem.", "danger");
         return;
     }
 
@@ -83,5 +86,17 @@ function calcular() {
         mensagem = `O herói de nome ${name} está no nível de Radiante.`;
     }
 
-    alert(mensagem);
+    mostrarMensagem(mensagem, "success");
 }
+
+function mostrarMensagem(texto, tipo) {
+    const mensagemDiv = document.getElementById("mensagem");
+    mensagemDiv.textContent = texto;
+    mensagemDiv.className = `alert alert-${tipo}`;
+    mensagemDiv.classList.remove("d-none");
+
+    setTimeout(() => {
+        mensagemDiv.classList.add("d-none");
+    }, 5000); // 5000 ms = 5 segundos
+}
+
