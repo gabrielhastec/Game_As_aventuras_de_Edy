@@ -1,5 +1,5 @@
 
-# Jogo - O caçador de histórias
+# Jogo - As aventuras de Edy
 
 Bem-vindo ao **Jogo Interativo de Narrativa**! Este é um jogo baseado em histórias onde cada decisão conta. Os jogadores serão imersos em um enredo envolvente, enfrentando desafios e tomando decisões que impactam o desenvolvimento da história. A cada escolha, novas possibilidades se abrem, levando a diferentes desfechos.
 
