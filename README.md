@@ -1,6 +1,4 @@
-Claro! Aqui está um exemplo de um arquivo README.md para o seu jogo baseado em histórias:
 
-```md
 # Jogo Interativo de Narrativa
 
 Bem-vindo ao **Jogo Interativo de Narrativa**! Este é um jogo baseado em histórias onde cada decisão conta. Os jogadores serão imersos em um enredo envolvente, enfrentando desafios e tomando decisões que impactam o desenvolvimento da história. A cada escolha, novas possibilidades se abrem, levando a diferentes desfechos.
@@ -89,5 +87,3 @@ Contribuições são bem-vindas! Se você quiser melhorar o jogo ou adicionar no
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 ```
-
-Esse README oferece uma boa visão geral do seu projeto, incluindo informações sobre como rodar o jogo, as tecnologias usadas, e como contribuir.
