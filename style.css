@@ -1,15 +1,19 @@
 /* style.css */
 
-/* Fundo da página */
+/* Fundo da página com imagem fixa */
 body {
-    background-color: #f8f9fa;
+    background-image: url('assets/imagens/fundo_floresta.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    background-color: #f8f9fa; /* Cor de fundo de fallback */
 }
 
 /* Container centralizado com estilo */
 .container {
     max-width: 600px;
     margin-top: 50px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -19,6 +23,7 @@ body {
 .btn-custom {
     background-color: #0d6efd;
     color: white;
+    transition: background-color 0.3s ease; /* Adicionando transição suave */
 }
 
 .btn-custom:hover {
@@ -26,4 +31,16 @@ body {
     color: white;
 }
 
-/* Ajustes adicionais, se necessário */
+/* Ajustes para dispositivos menores */
+@media (max-width: 576px) {
+    .container {
+        padding: 15px; /* Reduzindo o padding em telas pequenas */
+    }
+}
+
+/* Variáveis CSS para cores */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #0b5ed7;
+    --background-color: #f8f9fa;
+}

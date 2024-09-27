@@ -60,6 +60,12 @@ Para rodar o jogo localmente, siga os passos abaixo:
 - **/assets**: Contém as imagens, sons e outros recursos.
 - **/docs**: Documentação adicional sobre o projeto.
 
+### 🛠️ Funcionalidades Futuras
+
+- Sistema de pontos e recompensas.
+- Novos personagens e enredos adicionais.
+- Melhorias na interface do usuário.
+
 ## 🤝 Contribuições
 
 Contribuições são bem-vindas! Se você quiser melhorar o jogo ou adicionar novas funcionalidades, fique à vontade para fazer um fork e abrir um pull request.
