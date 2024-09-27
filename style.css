@@ -1,40 +1,29 @@
-body{
-    background-color: rgb(49, 80, 49);
+/* style.css */
 
-    display: grid;
-    place-items: center;
-}
-h1{
-    color: yellow;
-    font-style: italic;
-    font-family: 'Trebuchet MS';
-    /*
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;*/
-
-    display: grid;
-    place-items: center;
-}
-h2{
-    color: yellow;
-    font-style: italic;
-
-    display: grid;
-    place-items: center;
-
-}
-h3{
-    display: grid;
-    place-items: center;
+/* Fundo da página */
+body {
+    background-color: #f8f9fa;
 }
 
-form{
-    color: yellow;
+/* Container centralizado com estilo */
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Botão personalizado */
+.btn-custom {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #0b5ed7;
+    color: white;
+}
+
+/* Ajustes adicionais, se necessário */

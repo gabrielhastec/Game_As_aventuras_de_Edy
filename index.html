@@ -4,181 +4,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>As aventuras de Edy</title>
+    <title>As Aventuras de Edy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Personalizado -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <h1>As aventuras de Edy</h1>
-        <h2>Está pronto para começar sua aventura?</h2>
+    <div class="container">
+        <div class="text-center mb-4">
+            <h1>As Aventuras de Edy</h1>
+            <h2 class="h5">Está pronto para começar sua aventura?</h2>
+        </div>
+
+        <form id="gameForm">
+            <!-- Nome do Jogador -->
+            <div class="mb-3">
+                <label for="player" class="form-label">Digite o seu nome:</label>
+                <input type="text" class="form-control" id="player" name="Name" required>
+            </div>
+
+            <!-- Escolha do Personagem -->
+            <div class="mb-3">
+                <h3 class="h6">Escolha o seu personagem:</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="op_pers" id="magic" value="feiticeira">
+                    <label class="form-check-label" for="magic">
+                        Feiticeira(o)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="op_pers" id="guerreiro" value="guerreiro">
+                    <label class="form-check-label" for="guerreiro">
+                        Guerreiro
+                    </label>
+                </div>
+            </div>
+
+            <!-- Escolha de Itens -->
+            <div class="mb-3">
+                <legend class="h6">Escolha seus itens:</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="escudo" value="escudo">
+                    <label class="form-check-label" for="escudo">
+                        Escudo Mágico - Adiciona 700 xp
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="porcao" value="porcao">
+                    <label class="form-check-label" for="porcao">
+                        Porção Estrelada - Adiciona 1100 xp
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="p_forca" value="p_forca">
+                    <label class="form-check-label" for="p_forca">
+                        Pergaminho da Força - Adiciona 1200 xp
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="p_sabedoria" value="p_sabedoria">
+                    <label class="form-check-label" for="p_sabedoria">
+                        Pergaminho da Sabedoria - Adiciona 1300 xp
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="s_beringela" value="s_beringela">
+                    <label class="form-check-label" for="s_beringela">
+                        Saquinho de Berinjela - Adiciona 200 xp
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="espada" value="espada">
+                    <label class="form-check-label" for="espada">
+                        Espada de Ouro - Adiciona 950 xp
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="bebida" value="bebida">
+                    <label class="form-check-label" for="bebida">
+                        Bebida Demoníaca - Adiciona 550 xp
+                    </label>
+                </div>
+            </div>
+
+            <!-- Descrição da Personalidade -->
+            <div class="mb-3">
+                <legend class="h6">Descreva sua personalidade:</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="op_especial" id="intel" value="intel">
+                    <label class="form-check-label" for="intel">
+                        Planejar para resolver os problemas!
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="op_especial" id="forca" value="forca">
+                    <label class="form-check-label" for="forca">
+                        Sou corajoso e destemido!
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="op_especial" id="leal" value="leal">
+                    <label class="form-check-label" for="leal">
+                        Sou leal aos meus amigos e quero sempre ajudar!
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="op_especial" id="charme" value="charme">
+                    <label class="form-check-label" for="charme">
+                        Encanto todos com minha beleza!
+                    </label>
+                </div>
+            </div>
+
+            <!-- Botão de Jogar -->
+            <div class="text-center">
+                <button type="button" class="btn btn-custom" onclick="calcular()">Jogar!</button>
+            </div>
+        </form>
     </div>
 
-    <form name="f_player" action="#" method="get">
-        <fieldset>
-
-            <div>
-                <label for="player"> Digite o seu nome:  </label>
-                <input type="text" name="Name" id="player"> <br>
-            </div>
-
-            <h3>Escolha o seu personagem:</h3>
-
-            <div>
-                <input type="radio" name="op_pers" id="magic">
-                <label for="magic">Feiticeira(o)</label> <br>
-
-                <input type="radio" name="op_pers" id="guerreiro">
-                <label for="guerreiro">Guerreiro</label>
-            </div>
-
-        </fieldset> <br>
-
-        <fieldset>
-            <legend>Escolha seus itens:</legend><br>
-            <div>
-                <input type="checkbox" name="op_iten" id="escudo">
-                <label for="escudo">Escudo Mágico - Adiciona 700 xp</label> <br>
-
-                <input type="checkbox" name="op_iten" id="porcao">
-                <label for="porcao">Porçao Estrelada - Adiciona 1100 xp</label><br>
-
-                <input type="checkbox" name="op_iten" id="p_forca">
-                <label for="p_forca">Pergaminho da Força - Adiciona 1200 xp</label><br>
-
-                <input type="checkbox" name="op_iten" id="p_sabedoria">
-                <label for="p_sabedoria">Pergaminho da Sabedoria - Adiciona 1300 xp</label><br>
-                
-                <input type="checkbox" name="op_iten" id="s_beringela">
-                <label for="s_beringela">Saquinho de Beringela - Adiciona 200 xp</label><br>
-
-                <input type="checkbox" name="op_iten" id="espada">
-                <label for="espada">Espada de Ouro - Adiciona 950 xp</label><br>
-
-                <input type="checkbox" name="op_iten" id="bebida">
-                <label for="bebida">Bebida Demoníaca - Adiciona 550 xp</label><br>
-            </div>
-        </fieldset><br>
-
-        <fieldset>
-            <div>
-                <legend>Descreva sua personalidade: </legend><br>
-                <input type="radio" name="op_especial" id="intel">
-                <label for="intel">Planejar para resolver os problemas!</label><br>
-
-                <input type="radio" name="op_especial" id="forca">
-                <label for="forca">Sou corajoso e destemido!</label><br>
-
-                <input type="radio" name="op_especial" id="leal">
-                <label for="leal">Sou leal aos meus amigos e quero sempre ajudar!</label><br>
-
-                <input type="radio" name="op_especial" id="charme">
-                <label for="charme">Encanto todos com minha beleza!</label><br>
-            </div>
-        </fieldset>
-        
-    </form><br>
-
-    <input type="button" value="Jogar!" onclick="calcular()">
-
-    <script>
-
-        function calcular() {
-
-            let name = document.getElementById("player").value
-            let level = 0
-            let op_pers1 = document.getElementById("magic").checked
-            let op_pers2 = document.getElementById("guerreiro").checked
-                
-            while (level<1500) {        
-            
-                if (op_pers1) {
-                    level = level + 2000
-                    additens()
-                }
-                else if (op_pers2) {
-                    level = level + 1800
-                    additens()
-                }
-                else {
-                    alert("Você precisa escolher um personagem")
-                    return
-                } 
-
-            }
-                   
-            function additens() {
-
-                if (document.getElementById("escudo").checked) {
-                    level += 700           
-                } 
-                if (document.getElementById("porcao").checked) {
-                    level += 1100         
-                } 
-                if (document.getElementById("p_forca").checked) {
-                    level += 700          
-                } 
-                if (document.getElementById("p_sabedoria").checked) {
-                    level += 1200           
-                } 
-                if (document.getElementById("s_beringela").checked) {
-                    level += 200           
-                } 
-                if (document.getElementById("espada").checked) {
-                    level += 950            
-                } 
-                if (document.getElementById("bebida").checked) {
-                    level += 550           
-                }                
-            }
-
-            let atb_01 = document.getElementById("intel").checked
-            let atb_02 = document.getElementById("forca").checked
-            let atb_03 = document.getElementById("leal").checked
-            let atb_04 = document.getElementById("charme").checked
-
-            if (atb_01) {
-                level += 1600
-            }
-            else if (atb_02) {
-                level += 1400
-            }
-            else if (atb_03) {
-                level += 1200
-            }
-            else if (atb_04) {
-                level += 800
-            }
-
-            if (level < 1000) {
-                alert("O heroi de nome " + name + " está no nível de Ferro.");
-            } 
-            else if (level > 1001 && level <= 2000) {
-                alert("O heroi de nome " + name + " está no nível de Bronze.");
-            }
-            else if (level >= 2001 && level <= 5000) {
-                alert("O heroi de nome " + name + " está no nível de Prata.");
-            } 
-            else if (level >= 5001 && level <= 7000) {
-                alert("O heroi de nome " + name + " está no nível de Ouro.");
-            } 
-            else if (level >= 7001 && level <= 8000) {
-                alert("O heroi de nome " + name + " está no nível de Platina.");
-            } 
-            else if (level >= 8001 && level <= 9000) {
-                alert("O heroi de nome " + name + " está no nível de Ascendente.");
-            } 
-            else if (level >= 9001 && level <= 10000) {
-                alert("O heroi de nome " + name + " está no nível de imortal.");
-            } 
-            else {
-                alert("O heroi de nome " + name + " está no nível de Radicante.");
-            }
-            
-        }
-
-        
-    </script>
-
-    
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Personalizado -->
+    <script src="script.js"></script>
 </body>
 </html>
