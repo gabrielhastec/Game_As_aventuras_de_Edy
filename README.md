@@ -1,5 +1,5 @@
 
-# Jogo Interativo de Narrativa
+# Jogo - O caçador de histórias
 
 Bem-vindo ao **Jogo Interativo de Narrativa**! Este é um jogo baseado em histórias onde cada decisão conta. Os jogadores serão imersos em um enredo envolvente, enfrentando desafios e tomando decisões que impactam o desenvolvimento da história. A cada escolha, novas possibilidades se abrem, levando a diferentes desfechos.
 
@@ -86,4 +86,4 @@ Contribuições são bem-vindas! Se você quiser melhorar o jogo ou adicionar no
 ## 📄 Licença
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-```
+
